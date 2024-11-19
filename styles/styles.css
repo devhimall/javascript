@@ -69,12 +69,31 @@
   opacity: 0;
 }
 
-.debounce {
+.debounce,
+.throttling {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 800;
   font-size: 32px;
+}
+
+.throttling {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.throttling__button {
+  padding: 20px 40px;
+  border: 1px solid grey;
+  border-radius: 8px;
   text-transform: capitalize;
+}
+.throttling__button:hover {
+  cursor: pointer;
+  background-color: darkblue;
+  color: aliceblue;
+  font-weight: 800;
+  transition: all 300ms ease-in-out;
 }/*# sourceMappingURL=styles.css.map */

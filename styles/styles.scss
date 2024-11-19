@@ -83,13 +83,33 @@
 
 // assignment 2 styles start
 
-.debounce {
+.debounce,
+.throttling {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 800;
   font-size: 32px;
-  text-transform: capitalize;
+}
+
+.throttling {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  &__button {
+    padding: 20px 40px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    text-transform: capitalize;
+    &:hover {
+      cursor: pointer;
+      background-color: darkblue;
+      color: aliceblue;
+      font-weight: 800;
+      transition: all 300ms ease-in-out;
+    }
+  }
 }
 // assignment 2 styles end
