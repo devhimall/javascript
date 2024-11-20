@@ -115,4 +115,71 @@
 .assignments__links {
   display: flex;
   flex-direction: column;
+}
+
+.digital-clock {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.digital-clock__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  color: blue;
+  margin-top: 30px;
+}
+
+.code {
+  padding: 50px;
+}
+.code h2 {
+  padding-bottom: 10px;
+}
+
+.dom {
+  height: 600px;
+  width: 100%;
+}
+.dom h2 {
+  text-align: center;
+  font-size: 32px;
+  padding: 20px;
+}
+.dom__wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: darkblue;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dom__box {
+  height: 200px;
+  aspect-ratio: 1;
+  background-color: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  font-weight: 800;
+  font-size: 32px;
+  animation: LeftRight 5s infinite alternate;
+}
+@keyframes LeftRight {
+  0% {
+    transform: translate(calc(-50vw + 100px));
+  }
+  50% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(calc(50vw - 100px));
+  }
 }/*# sourceMappingURL=styles.css.map */
