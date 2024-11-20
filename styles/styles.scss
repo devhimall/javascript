@@ -81,10 +81,9 @@
 
 // assignment 1 styles end
 
-// assignment 2 styles start
+// assignment 2 styles startsadfa
 
-.debounce,
-.throttling {
+.debouncei .throttling {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -113,3 +112,26 @@
   }
 }
 // assignment 2 styles end
+
+// index.html styles
+.section-heading {
+  width: 80%;
+  text-transform: capitalize;
+  margin: auto;
+  padding-top: 100px;
+  font-weight: 800;
+  font-size: 32px;
+}
+
+.assignments {
+  max-width: 80%;
+  margin: auto;
+  line-height: 80px;
+  text-transform: capitalize;
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    // gap: 10px;
+  }
+}
