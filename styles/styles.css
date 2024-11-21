@@ -69,7 +69,7 @@
   opacity: 0;
 }
 
-.debouncei .throttling {
+.debounce .throttling {
   height: 100vh;
   display: flex;
   justify-content: center;
