@@ -16,6 +16,7 @@ fruits.pop() //this remove n-1 element
 fruits.pop() // this remove n-2 element
 fruits.pop() // this remove n-3 element
 
+// ===== note that is implementing below
 // or we can use splice() to remove the element from an array.
 console.table(fruits)
 

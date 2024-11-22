@@ -3,7 +3,7 @@
 // Ans=> the main difference between function scoping and block scoping is that, if we define or declare any variables or method we can call it inside block whereas we can not call the variables and methods in function scope that are define in block scope.
 // let see some example related to function scope and block scope.
 
-function PercentageGrade(mark) {
+function percentageGrade(mark) {
   let grade = mark
   if (grade > 90) {
     let percentage = grade
@@ -14,4 +14,4 @@ function PercentageGrade(mark) {
   return console.log(`I am happy that i got ${percentage}% in overall.`)
 }
 
-PercentageGrade(94)
+percentageGrade(94)

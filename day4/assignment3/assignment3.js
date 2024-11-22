@@ -1,7 +1,7 @@
 let result = document.querySelector(".result")
 let btn = document.querySelector(".throttling__button")
 
-function trottling(func, delay = 10) {
+function throttling(func, delay = 10) {
   let isWaiting = false
   let count = 0
   return function executedFunction(...args) {
@@ -19,5 +19,5 @@ function trottling(func, delay = 10) {
 
 btn.addEventListener(
   "click",
-  trottling(() => {}, 1000)
+  throttling(() => {}, 1000)
 )
