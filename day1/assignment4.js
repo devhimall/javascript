@@ -1,7 +1,7 @@
 // How do var, let, and const differ in terms of scope and hoisting? Write a code differentiating them.
 
 // var keyword has global scope and it return undefined even if it is not define before it is using.
-function IsGreater() {
+function isGreater() {
   let num2 = 44
   let num3 = 10
 
@@ -21,4 +21,4 @@ function IsGreater() {
 
 //calling the function
 
-IsGreater()
+isGreater()
