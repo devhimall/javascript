@@ -1,6 +1,7 @@
 let audioPlayer = document.getElementById("audio-player")
 let progressBar = document.getElementById("progressBar")
 let timer = document.querySelector(".audio-player-wrapper__timer")
+let audioPlayerWrapper = document.querySelector(".audio-player-wrapper")
 
 // controls
 let playBtn = document.querySelector(".audio-player-wrapper__play")
@@ -85,3 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
     audioPlayer.currentTime = Math.max(0, audioPlayer.currentTime + 10)
   })
 })
+
+// =================================== start of the styles
+// audioPlayerWrapper.innerHTML = ""
+audioPlayerWrapper.style.background = "#FFF5E4"
+
+// ===================================== end of the styles
