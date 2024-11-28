@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="/javascript/audioplayer/styles/audioplayer.css">
+
+</head>
+
+<body>
+    <section class="audio-player-wrapper">
+        <header class="audio-player-wrapper__heading">
+            <h1>Hi, this is audio or music player build using ismple html, css, and javascript</h1>
+            <p>This is a simple audio player with the functinality of play, pause, next, and farward. Here i have used
+                custom timing, next, pause, play and back functionality.</p>
+        </header>
+        <div class="audio-player-wrapper__audio-wrapper">
+            <div class="audio-player-wrapper__image">
+                <img src="/javascript/day5/assets/image1.jpg" alt="circle profile image of the audio player"
+                    aria-label="This is the cover image of the audio.">
+            </div>
+
+            <figure>
+                <audio id="audio-player" class="audio-player-wrapper__audio-player"
+                    src="/javascript/audioplayer/assets/maile.mp3">
+                </audio>
+                <figcaption>Maile Covered by John Chamling Rai</figcaption>
+                <div id="audio-player-wrapper__progressContainer">
+                    <input id="progressBar" type="range" min="0" max="100" value="0">
+                </div>
+                <p class="audio-player-wrapper__timer">00:00</p>
+                <div class="audio-player-wrapper__controls">
+                    <button class="audio-player-wrapper__skipPrev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-skip-start" viewBox="0 0 16 16">
+                            <path
+                                d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.52-.302 1.233.043 1.233.696v7.384c0 .653-.713.998-1.233.696L5 8.752V12a.5.5 0 0 1-1 0zm7.5.633L5.696 8l5.804 3.367z" />
+                        </svg>
+                    </button>
+                    <button class="audio-player-wrapper__play">
+
+                        <!-- by default the icons is play -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-play-fill" viewBox="0 0 16 16">
+                            <path
+                                d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
+                        </svg>
+                    </button>
+
+                    <button class="audio-player-wrapper__nextSkip"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-skip-end" viewBox="0 0 16 16">
+                            <path
+                                d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.713 3.31 4 3.655 4 4.308v7.384c0 .653.713.998 1.233.696L11.5 8.752V12a.5.5 0 0 0 1 0zM5 4.633 10.804 8 5 11.367z" />
+                        </svg>
+                    </button>
+                </div>
+            </figure>
+
+
+        </div>
+    </section>
+
+
+    <!-- script  -->
+    <script src="/javascript/audioplayer/js/audioplayer.js"></script>
+</body>
+
+</html>

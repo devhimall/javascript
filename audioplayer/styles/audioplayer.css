@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.audio-player-wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  height: 100%;
+  padding-top: 50px;
+  padding-inline: 50px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.audio-player-wrapper__heading {
+  text-align: center;
+  line-height: 40px;
+}
+.audio-player-wrapper__heading h1 {
+  font-size: 32px;
+}
+.audio-player-wrapper__heading p {
+  font-size: 20px;
+}
+.audio-player-wrapper__audio-wrapper {
+  border: 1px solid #c1d8c3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  height: 500px;
+  width: 400px;
+  border-radius: 10px;
+  padding: 0px 50px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.audio-player-wrapper figure {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.audio-player-wrapper figure figcaption {
+  line-height: 30px;
+  text-transform: capitalize;
+}
+.audio-player-wrapper__image {
+  border: 1px solid orangered;
+  overflow: hidden;
+  height: 180px;
+  width: 180px;
+  border-radius: 100%;
+  filter: drop-shadow(0 0 1.5rem #94c0f3);
+  animation: circle 2s infinite alternate;
+}
+@keyframes circle {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 0.98;
+  }
+  100% {
+    scale: 1;
+  }
+}
+.audio-player-wrapper__image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.audio-player-wrapper__controls {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 20px;
+}
+.audio-player-wrapper__controls button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  border: none;
+  background: none;
+}
+.audio-player-wrapper__controls button svg {
+  height: 50px;
+  width: 50px;
+  fill: #0075ff;
+}
+
+#audio-player-wrapper__progressContainer {
+  width: 100%;
+}
+#audio-player-wrapper__progressContainer input[type=range] {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=audioplayer.css.map */
