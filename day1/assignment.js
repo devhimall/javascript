@@ -1,3 +1,4 @@
+let result = document.getElementsByClassName("result")
 // Define Array and objects and console them with appropriate console tools.
 
 // Defining an array

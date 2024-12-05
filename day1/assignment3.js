@@ -5,8 +5,8 @@
 
 function percentageGrade(mark) {
   let grade = mark
+  let percentage = (mark / 100) * 100
   if (grade > 90) {
-    let percentage = grade
     console.log(`You received ${grade} and its ${percentage}% in overall.`)
   }
 
