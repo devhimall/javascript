@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+  --primary-color: #3e4e43;
+  --hover-color: orangered;
+  --background-color: #66785f;
+  --text-dark: #333333;
+  --text-light: #d1cfc6;
+  --accent-color: #2c3e47;
+  --secondary-accent: #4b6a52;
+  --secondary-color: #ffffff;
+}
+
+$navbar: "navbar";
+$leadspace: "leadspace";
+
+*,
+::before,
+::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+
+  // Popup
+  .popup {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(50px, 10vw, 50px);
+    padding: 50px;
+    background-color: var(--background-color);
+
+    &__title {
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: center;
+
+      .popup-word {
+        font-size: clamp(50px, 10vw, 130px);
+      }
+    }
+  }
+
+  &__navbar {
+    height: 100vh;
+    width: 100%;
+    color: var(--primary-color);
+    position: relative;
+    z-index: 3;
+
+    .#{$navbar} {
+      &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+        padding: 40px 0px;
+        font-size: 20px;
+
+        &__logo {
+          text-align: center;
+        }
+
+        &__list {
+          display: flex;
+          gap: 30px;
+          list-style: none;
+        }
+
+        // logo text:
+        &__link {
+          text-decoration: none;
+          text-transform: capitalize;
+        }
+      }
+
+      &__text {
+        color: var(--primary-color);
+        font-size: clamp(40px, 8vw, 60px);
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &__list {
+        position: absolute;
+        height: 100vh;
+        width: 80%;
+        top: 0;
+        right: -500px;
+        background-color: var(--secondary-accent);
+        color: var(--text-light);
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 30px;
+
+        @media screen and (min-width: 768px) {
+          width: 500px;
+        }
+      }
+
+      &__menu {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &__close {
+        right: 0;
+        width: 100%;
+        text-align: end;
+        margin-bottom: 30px;
+      }
+      &__item {
+        width: 100%;
+        padding: 20px 20px;
+        line-height: 28px;
+        border-radius: 8px;
+      }
+      &__link {
+        text-decoration: none;
+        width: 100%;
+        color: var(--secondary-color);
+        font-weight: 500;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &__leadspace,
+  &__slider {
+    height: 600px;
+    width: 100%;
+  }
+
+  // Leadspace section styles
+  &__leadspace {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    border: 1px solid red;
+    padding-top: 15%;
+    padding-left: 50px;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .#{$leadspace} {
+      &__wrapper {
+        height: 100%;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+      }
+
+      &__image-wrapper {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        height: 100%;
+        @media screen and (min-width: 768px) {
+          grid-template-columns: repeat(2, auto);
+          gap: 20px;
+        }
+        img {
+          height: 150px;
+          width: 150px;
+          // border: 1px solid red;
+        }
+      }
+
+      &__title {
+        font-size: clamp(40px, 4vw, 50px);
+        font-weight: 600;
+        line-height: clamp(40px, 6vw, 50px);
+        width: 200px;
+        text-wrap: wrap;
+      }
+
+      &__subtitle {
+        font-size: clamp(24px, 4vw, 30px);
+        line-height: clamp(30px, 4vw, 40px);
+      }
+
+      &__cta {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        padding: 20px 30px;
+        width: fit-content;
+        font-size: 18px;
+        text-transform: capitalize;
+        text-decoration: none;
+        border-radius: 2px;
+        &:hover {
+          background-color: var(--hover-color);
+          transition: all 500ms ease-in-out;
+        }
+      }
+    }
+  }
+
+  // End of Leadspace section style
+
+  &__slider {
+    background-color: darkblue;
+  }
+
+  .slider--events {
+    background: green;
+  }
+}
