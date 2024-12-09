@@ -18,18 +18,18 @@
 
 
 <body>
+    <div id="progress-bar"></div>
 
     <main class="container">
         <!-- Pop  up -->
-        <!-- <section class="popup">
+        <section class="popup">
             <p class="popup__title text" id="popup">Sport week at outside.</p>
-        </section> -->
-
+        </section>
 
         <!-- Navbar Section Start -->
-        <!-- <section class="container__navbar " id="navbar"> -->
+        <section class="container__navbar " id="navbar">
 
-        <!-- <div class="navbar__wrapper">
+            <div class="navbar__wrapper">
                 <div class="navbar__logo">
                     <a href="#" class="navbar__text">Outside Sports Arena</a>
                 </div>
@@ -39,10 +39,10 @@
                         <path fill-rule="evenodd"
                             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                     </svg>
-                </div> -->
+                </div>
 
-        <!-- Navlists -->
-        <!-- <ul class="navbar__list">
+                <!-- Navlists -->
+                <ul class="navbar__list">
                     <li class="navbar__close">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                             class="bi bi-x-lg close" viewBox="0 0 16 16">
@@ -55,10 +55,10 @@
                     <li class="navbar__item"><a href="#footer" class="navbar__link">Footer</a></li>
                     <li class="navbar__item"><a href="#leadspace" class="navbar__link">Leadspace</a></li>
                 </ul>
-            </div> -->
+            </div>
 
-        <!-- Leadspace Section -->
-        <!-- <section id="leadspace" class="container__leadspace leadspace">
+            <!-- Leadspace Section -->
+            <section id="leadspace" class="container__leadspace leadspace">
                 <div class="leadspace__wrapper">
                     <h1 class="leadspace__title">Sports. Week. Extravaganza.</h1>
                     <p>
@@ -82,9 +82,9 @@
                         aria-label="A silver 3D trophy designed for chess champions, with an orange gradient at the base.">
 
                 </div>
-            </section> -->
+            </section>
 
-        <!-- </section> -->
+        </section>
         <!-- Navbar Section End -->
 
         <!-- Slider 1 Section -->
@@ -137,11 +137,7 @@
                     </div>
                 </div>
 
-                <!-- If we need pagination -->
-                <!-- <div class="swiper-pagination"></div> -->
-                
-                <!-- If we need scrollbar -->
-                <!-- <div class="swiper-scrollbar"></div> -->
+
             </div>
 
         </section>
@@ -205,15 +201,29 @@
         </section>
 
         <!-- Footer Section -->
-        <footer id="footer" class="container__footer footer">
-            <div class="footer__content">
-                <p class="footer__text">© 2024 Sports Arena. All Rights Reserved.</p>
-                <ul class="footer__social">
-                    <li class="footer__social-item"><a href="#" class="footer__social-link">Facebook</a></li>
-                    <li class="footer__social-item"><a href="#" class="footer__social-link">Twitter</a></li>
-                    <li class="footer__social-item"><a href="#" class="footer__social-link">Instagram</a></li>
-                </ul>
-            </div>
+        <footer class="footer">
+            <canvas id="bubbleCanvas"></canvas>
+            <div class="footer__overlay"></div>
+            <ul class="footer__lists">
+                <li>
+                    <p>Outside</p>
+                </li>
+                <li>
+                    <h2>Important Links</h2>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                </li>
+                <li>
+                    <h2>Social Media links</h2>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                </li>
+            </ul>
+
         </footer>
         <!-- Footer Section End -->
     </main>
@@ -225,6 +235,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/gsap.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/bubble.js"></script>
 </body>
 
 </html>

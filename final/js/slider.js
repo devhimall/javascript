@@ -1,3 +1,15 @@
+// For the progress bar
+window.addEventListener("scroll", function () {
+  const scrollHeight =
+    document.documentElement.scrollHeight - window.innerHeight
+  const scrollPosition = window.scrollY
+  const scrollPercent = (scrollPosition / scrollHeight) * 100
+
+  document.getElementById("progress-bar").style.width = scrollPercent + "%"
+})
+
+// end of progressbar.
+
 const swipers = document.querySelectorAll(".swiper")
 
 swipers.forEach((swiperContainer, index) => {
