@@ -159,6 +159,7 @@ body {
 @media screen and (min-width: 768px) {
   .container__leadspace {
     grid-template-columns: repeat(2, 1fr);
+    padding-top: 15%;
   }
 }
 .container__leadspace .leadspace__wrapper {
