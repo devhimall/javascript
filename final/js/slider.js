@@ -64,8 +64,5 @@ swipers.forEach((swiperContainer, index) => {
 
   // Add event listeners for pausing autoplay on mouse enter and resume on mouse leave
   swiperContainer.addEventListener("mouseenter", () => swiper.autoplay.stop())
-  swiperContainer.addEventListener("mouseleave", () => swiper.autoplay.sstart())
-  // } else {
-  //   console.log("There is no sliders element ")
-  // }
+  swiperContainer.addEventListener("mouseleave", () => swiper.autoplay.start())
 })
