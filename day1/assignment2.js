@@ -11,5 +11,7 @@ let resultc = temperatureConversion(45, "c")
 let resultf = temperatureConversion(90, "f")
 
 // consoling the results
+console.log("Start of the consoles of question 2")
 console.log(resultc)
 console.log(resultf)
+console.log("End of the consoles of questions 2")
