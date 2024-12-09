@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Final Assignment</title>
+    <link rel="stylesheet" href="/javascript/styles/leadspace.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .swiper {
+            width: 600px;
+            height: 300px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div id="progress-bar"></div>
+
+    <main class="container">
+        <!-- Pop  up -->
+        <section class="popup">
+            <p class="popup__title text" id="popup">Sport week at outside.</p>
+        </section>
+
+        <!-- Navbar Section Start -->
+        <section class="container__navbar " id="navbar">
+
+            <div class="navbar__wrapper">
+                <div class="navbar__logo">
+                    <a href="#" class="navbar__text">Outside Sports Arena</a>
+                </div>
+                <div class="navbar__menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-list menu" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </div>
+
+                <!-- Navlists -->
+                <ul class="navbar__list">
+                    <li class="navbar__close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi bi-x-lg close" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg>
+                    </li>
+                    <li class="navbar__item"><a href="#slider1" class="navbar__link">Slider 1</a></li>
+                    <li class="navbar__item"><a href="#slider2" class="navbar__link">Slider 2</a></li>
+                    <li class="navbar__item"><a href="#footer" class="navbar__link">Footer</a></li>
+                    <li class="navbar__item"><a href="#leadspace" class="navbar__link">Leadspace</a></li>
+                </ul>
+            </div>
+
+            <!-- Leadspace Section -->
+            <section id="leadspace" class="container__leadspace leadspace">
+                <div class="leadspace__wrapper">
+                    <h1 class="leadspace__title">Sports. Week. Extravaganza.</h1>
+                    <p>
+                        <span class="leadspace__subtitle">3 Teams. </span>
+                        <span class="leadspace__subtitle">1 Category. </span>
+                        <span class="leadspace__subtitle">Endless Fun. </span>
+                    </p>
+                    <a href="#slider1" class="leadspace__cta">Discover the Teams</a>
+                </div>
+                <div class="leadspace__image-wrapper"><img class="trophy"
+                        src="/javascript/final/assets/announcement.png" alt="Announcement trophy"
+                        aria-label="A silver 3D trophy with an orange gradient at the bottom, representing an announcement award.">
+
+                    <img class="trophy" src="/javascript/final/assets/badge.png" alt="Badge trophy"
+                        aria-label="A silver 3D badge-shaped trophy with an orange gradient at the bottom, representing an achievement badge.">
+
+                    <img class="trophy" src="/javascript/final/assets/trophy.png" alt="Standard trophy"
+                        aria-label="A silver 3D standard trophy with handles and an orange gradient at the base, symbolizing victory.">
+
+                    <img class="trophy" src="/javascript/final/assets/chess.png" alt="Chess trophy"
+                        aria-label="A silver 3D trophy designed for chess champions, with an orange gradient at the base.">
+
+                </div>
+            </section>
+
+        </section>
+        <!-- Navbar Section End -->
+
+        <!-- Slider 1 Section -->
+        <section id="slider1" class="container__slider slider slider--teams">
+            <h2 class="slider__title">Featured Teams Members</h2>
+            <!-- Slider main container -->
+            <div class="swiper ">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+
+                    <div class="swiper-slide" aria-label="Slide showing team member 2">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team Member 2</div>
+                        <img src="/javascript/final/assets/team/team2.jpg" alt="Image of team member 2">
+                    </div>
+                    <div class="swiper-slide" aria-label="Slide showing team member 3">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team Member 3</div>
+                        <img src="/javascript/final/assets/team/team4.jpg" alt="Image of team member 3">
+                    </div>
+                    <div class="swiper-slide" aria-label="Slide showing team member 4">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team Member 4</div>
+                        <img src="/javascript/final/assets/team/team3.jpg" alt="Image of team member 4">
+                    </div>
+                    <div class="swiper-slide" aria-label="Slide showing team member 1">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team Member 1</div>
+                        <img src="/javascript/final/assets/team/team1.jpg" alt="Image of team member 1">
+                    </div>
+                    <div class="swiper-slide" aria-label="Slide showing team member 1">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team Member 1</div>
+                        <img src="/javascript/final/assets/team/team1.jpg" alt="Image of team member 1">
+                    </div>
+                    <div class="swiper-slide" aria-label="Slide showing team member 1">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team Member 1</div>
+                        <img src="/javascript/final/assets/team/team1.jpg" alt="Image of team member 1">
+                    </div>
+                    <div class="swiper-slide" aria-label="Slide showing team member 1">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team Member 1</div>
+                        <img src="/javascript/final/assets/team/team1.jpg" alt="Image of team member 1">
+                    </div>
+                    <div class="swiper-slide" aria-label="Slide showing team member 1">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team Member 1</div>
+                        <img src="/javascript/final/assets/team/team1.jpg" alt="Image of team member 1">
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- Slider 2 Section -->
+        <section id="slider2" class="container__slider slider slider--events    ">
+            <h2 class="slider__title">Our Events Teams</h2>
+            <!-- Slider main container -->
+            <div class="swiper ">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide" aria-label="Slide showing Team 1">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team 1</div>
+                        <img src="/javascript/final/assets/team/team1.jpg" alt="Image of Team 1">
+                    </div>
+                    <div class="swiper-slide" aria-label="Slide showing Team 1">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team 1</div>
+                        <img src="/javascript/final/assets/team/team1.jpg" alt="Image of Team 1">
+                    </div>
+                    <div class="swiper-slide" aria-label="Slide showing Team 1">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team 1</div>
+                        <img src="/javascript/final/assets/team/team1.jpg" alt="Image of Team 1">
+                    </div>
+                    <div class="swiper-slide" aria-label="Slide showing Team 1">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team 1</div>
+                        <img src="/javascript/final/assets/team/team1.jpg" alt="Image of Team 1">
+                    </div>
+                    <div class="swiper-slide" aria-label="Slide showing Team 1">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team 1</div>
+                        <img src="/javascript/final/assets/team/team1.jpg" alt="Image of Team 1">
+                    </div>
+                    <div class="swiper-slide" aria-label="Slide showing Team 2">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team 2</div>
+                        <img src="/javascript/final/assets/team/team2.jpg" alt="Image of Team 2">
+                    </div>
+                    <div class="swiper-slide" aria-label="Slide showing Team 3">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team 3</div>
+                        <img src="/javascript/final/assets/team/team4.jpg" alt="Image of Team 3">
+                    </div>
+                    <div class="swiper-slide" aria-label="Slide showing Team 4">
+                        <div class="swiper-slide__overlay"></div>
+                        <div class="swiper-slide__content">Team 4</div>
+                        <img src="/javascript/final/assets/team/team3.jpg" alt="Image of Team 4">
+                    </div>
+                </div>
+
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <canvas id="bubbleCanvas"></canvas>
+            <div class="footer__overlay"></div>
+            <ul class="footer__lists">
+                <li>
+                    <p>Outside</p>
+                </li>
+                <li>
+                    <h2>Important Links</h2>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                </li>
+                <li>
+                    <h2>Social Media links</h2>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                </li>
+            </ul>
+
+        </footer>
+        <!-- Footer Section End -->
+    </main>
+
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/gsap.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/bubble.js"></script>
+</body>
+
+</html>
