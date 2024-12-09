@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Assignments</title>
+</head>
+
+<body>
+    <h1>Day2 - Assignment 1</h1>
+    <pre>
+        function isEven(num) {
+        let evenNumbers = []
+        for (let i = 1; i <= num; i++) { if (i % 2==0) { evenNumbers.push(i) } } return evenNumbers } // calling function and
+            function returns an array of even numbers. so we to loop through it. var even=isEven(100) // printing the array of
+            even numbers. console.log(even) // consoling each even number using for each loop. even.forEach((e)=> {
+            console.log(e)
+            })
+
+    </pre>
+    <h2>Day2 - Assignment 2</h2>
+    <pre>
+        // Create an array. Remove 3 elements starting from index 4, and insert 5 new elements at that position using the
+        appropriate method.
+        
+        let fruits = [
+        "orange",
+        "apple",
+        "mango",
+        "grapes",
+        "pineaples",
+        "watermelon",
+        "guava",
+        "kiwi",
+        "strawberry",
+        ]
+        // removing the three elements from the fruits array.
+        fruits.pop() //this remove n-1 element
+        fruits.pop() // this remove n-2 element
+        fruits.pop() // this remove n-3 element
+        
+        // ===== note that is implementing below
+        // or we can use splice() to remove the element from an array.
+        console.table(fruits)
+        
+        // adding the element from index 4
+        
+        fruits.splice(4, 0, "newFruit1", "newFruit2", "newFruit3") //starting from index 4 and remove 0 element from the array.
+        console.table(fruits)
+
+    </pre>
+    <h2>Day2 - Assignment 3</h2>
+    <pre>// Create an array.
+    // Remove first element
+    // Remove last element
+    // Add new element at the beginning
+    // Add a new element at the end
+    // Console log all the arrays along with the original modified array.
+    
+    const sampleArray = [
+    "apple",
+    "banana",
+    "cherry",
+    "date",
+    "elderberry",
+    "fig",
+    "grape",
+    "honeydew",
+    "kiwi",
+    "lemon",
+    ]
+    console.log("original array")
+    console.table(sampleArray)
+    
+    // removing the first element of the array
+    sampleArray.shift()
+    console.log("removing the first element")
+    console.log(sampleArray)
+    
+    // removing the last element
+    sampleArray.pop()
+    console.log("removing the element from the last")
+    console.log(sampleArray)
+    
+    // adding the new element add the beginning
+    sampleArray.unshift("guava")
+    console.log("adding new element at the beginning")
+    console.log(sampleArray)
+    
+    //add new element at the end
+    sampleArray.push("lastelement")
+    console.log("adding new element at last")
+    console.log(sampleArray)
+</pre>
+    <h2>Day2 -Assignment 4</h2>
+    <pre>
+    // Create a new array element.
+    // Create a new array with the multiplication of 5
+    // Create a new array finding the maximum number of new array (task number 4.a)
+    // Also list out the even numbers of both new and original array.
+    
+    const arrayNumbers = [1, 2, 3, 4, 5, 20, 6, 7, 8, 9, 10, 40, 60, 90, 200]
+    
+    // creating a new array that is multiple of 5
+    let newArrayNumbers = arrayNumbers.map((x) => x * 5)
+    
+    // creating new array based on newArrayNumbers, finding the maximum number.
+    
+    // ========= METHOD 1
+    let maxNumber = newArrayNumbers.reduce((acc, curr) => (acc > curr ? acc : curr))
+    let newMaxArray = []
+    newMaxArray.push(maxNumber)
+    
+    // ======== METHOD 2
+    let max = 0
+    for (let i = 0; i < newArrayNumbers.length; i++) { if (max> newArrayNumbers[i]) {
+        max = max
+        } else {
+        max = newArrayNumbers[i]
+        }
+        }
+    
+        // defining new array
+        let newMaxArray1 = []
+        newMaxArray1.push(max)
+        // Consoling the output
+        // original array
+        console.log("Original array: ")
+        console.log(arrayNumbers)
+    
+        // multiple of five
+        console.log("Multiple of 5 array:")
+        console.log(newArrayNumbers)
+    
+        // max array
+        console.log("Finding the max array element using reduce function")
+        console.log(newMaxArray)
+        // second method console
+        console.log("Finding the max array elemment using loop:")
+        console.log(newMaxArray1)
+
+</pre>
+
+    <!-- scripts -->
+    <script src="/javascript/day2/assignment1.js">
+    </script><script src="/javascript/day2/assignment2.js">
+    </script><script src="/javascript/day2/assignment3.js">
+    </script><script src="/javascript/day2/assignment4.js">
+    </script>
+</body>
+
+</html>
