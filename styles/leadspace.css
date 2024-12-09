@@ -154,7 +154,6 @@ body {
   gap: 20px;
   padding-top: 30%;
   padding-left: 50px;
-  border: 1px solid red;
 }
 @media screen and (min-width: 768px) {
   .container__leadspace {
