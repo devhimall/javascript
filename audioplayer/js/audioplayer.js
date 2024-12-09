@@ -5,90 +5,73 @@ let audioPlayerWrapper = document.querySelector(".audio-player-wrapper")
 
 // controls
 let playBtn = document.querySelector(".audio-player-wrapper__play")
-// let pauseBtn = document.querySelector(".audio-player-wrapper__pause")
 let skipPrev = document.querySelector(".audio-player-wrapper__skipPrev")
 let skipNext = document.querySelector(".audio-player-wrapper__nextSkip")
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Update progress bar as the audio plays
   audioPlayer.addEventListener("timeupdate", () => {
     const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100
     progressBar.value = progress
 
-    // calculating the the total time
-    let totalSeconds = Math.floor(audioPlayer.duration)
+    // Calculate total time and current time
+    let totalSeconds = Math.floor(audioPlayer.duration || 0)
     let minutes = Math.floor(totalSeconds / 60)
     let seconds = totalSeconds % 60
 
-    // Calculating the minutes, seconds based on real time update
-    let changeTotalSeconds = Math.floor(audioPlayer.currentTime)
-    let changeMinutes = Math.floor(changeTotalSeconds / 60)
-    let changeSeconds = changeTotalSeconds % 60
+    let currentSeconds = Math.floor(audioPlayer.currentTime || 0)
+    let currentMinutes = Math.floor(currentSeconds / 60)
+    let currentDisplaySeconds = currentSeconds % 60
 
-    timer.innerHTML = ` ${changeMinutes
+    timer.innerHTML = `${currentMinutes
       .toString()
-      .padStart(2, "0")}:${changeSeconds
+      .padStart(2, "0")}:${currentDisplaySeconds
       .toString()
-      .padStart(2, "0")}  / ${minutes}: ${seconds.toString().padStart(2, "0")}`
+      .padStart(2, "0")} / ${minutes}:${seconds.toString().padStart(2, "0")}`
   })
 
-  audioPlayer.addEventListener("play", () => {
-    // changing the icons based on play and pause behavior of the audio
-    playBtn.innerHTML = `
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        fill="currentColor"
-        class="bi bi-pause"
-        viewBox="0 0 16 16"
-      >
-        <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5" />
-      </svg>
-    `
-
-    // if audio is playing and we click on playBtn, this event is call.
-    playBtn.addEventListener("click", () => {
+  // Play and pause functionality
+  playBtn.addEventListener("click", () => {
+    if (audioPlayer.paused) {
+      audioPlayer.play()
+    } else {
       audioPlayer.pause()
-    })
+    }
+  })
+
+  // Update play/pause button icon
+  audioPlayer.addEventListener("play", () => {
+    playBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16"><path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5" /></svg>`
   })
 
   audioPlayer.addEventListener("pause", () => {
-    // changing the icon based on play and pause functionality
-    playBtn.innerHTML = `
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        fill="currentColor"
-        class="bi bi-play-fill"
-        viewBox="0 0 16 16"
-      >
-        <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-      </svg>
-    `
-
-    // this call if audio is pause
-    playBtn.addEventListener("click", () => {
-      audioPlayer.play()
-    })
+    playBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" /></svg>`
   })
 
-  // by default it is call when we click on playBtn
-  playBtn.addEventListener("click", () => {
-    audioPlayer.play()
-  })
-
+  // Skip functionality
   skipPrev.addEventListener("click", () => {
     audioPlayer.currentTime = Math.max(0, audioPlayer.currentTime - 10)
   })
 
   skipNext.addEventListener("click", () => {
-    audioPlayer.currentTime = Math.max(0, audioPlayer.currentTime + 10)
+    audioPlayer.currentTime = Math.min(
+      audioPlayer.duration,
+      audioPlayer.currentTime + 10
+    )
+  })
+
+  // Dragging progress bar
+  progressBar.addEventListener("input", (e) => {
+    const newTime = (progressBar.value / 100) * audioPlayer.duration
+    audioPlayer.currentTime = newTime
+  })
+
+  // Update progress bar and handle drag
+  progressBar.addEventListener("mousedown", () => {
+    audioPlayer.pause() // Pause audio while dragging
+  })
+
+  progressBar.addEventListener("mouseup", () => {
+    audioPlayer.play() // Resume audio after dragging
   })
 })
-
-// =================================== start of the styles
-// audioPlayerWrapper.innerHTML = ""
-audioPlayerWrapper.style.background = "#FFF5E4"
-
-// ===================================== end of the styles
